@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const { data: users } = await useSanctumFetch<any>("/api/users");
+
+console.log(users.value);
 </script>
 
 <template>
