@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: users } = useSanctumFetch<any>("/api/users");
+const { data: users } = await useSanctumFetch<any>("/api/users");
 </script>
 
 <template>
