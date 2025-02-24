@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const route = useRoute();
-const { data: user } = await useLarafetch<any>(`/api/users/${route.params.id}`);
-
-console.log(user.value);
+const { data: user } = await useSanctumFetch<any>(
+  `/api/users/${route.params.id}`
+);
 
 if (!user.value) {
   throw createError({
